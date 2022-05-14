@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import ErrorFallback from '../ErrorFallBack';
-import SimpleButton from '@components/buttons/SimpleButton/SimpleButton';
+import ErrorFallback from './ErrorFallBack';
+import { Button } from 'antd';
 
 describe('ErrorFallBack', () => {
   let wrapper;
@@ -34,7 +34,7 @@ describe('ErrorFallBack', () => {
   // EVENT HANDLER
   // ====================
   it('should invoke reset error handler', () => {
-    wrapper.find(SimpleButton).simulate('click');
+    wrapper.find(Button).simulate('click');
     expect(resetErrorBoundaryHandler).toBeCalled();
   });
 });
